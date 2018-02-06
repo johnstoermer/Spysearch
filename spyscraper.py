@@ -14,7 +14,8 @@ class spyscraper:
         self.album_names = []
         self.track_ids = []
         self.track_names = []
-        self.track_analysis = []
+        self.track_analysis_input = []
+        self.track_analysis_output = []
         self.outputid = outputid
     
     def findArtists(self, lim, maxPage, q_value):
@@ -56,7 +57,8 @@ class spyscraper:
                 single_track_analysis = [results[i]['energy'],results[i]['liveness'],results[i]['valence'],results[i]['time_signature'],
                                   results[i]['danceability'],results[i]['instrumentalness'],results[i]['tempo'],results[i]['loudness'],
                                   results[i]['mode'],results[i]['key'],results[i]['acousticness'],results[i]['speechiness']]
-                self.track_analysis.append([single_track_analysis],[self.outputid])
+                self.track_analysis_input.append(single_track_analysis)
+                self.track_analysis_output.append(self.ouput_id)
                 print(single_track_analysis)
             except TypeError:
                 print('Oops!')
