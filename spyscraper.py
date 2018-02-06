@@ -31,7 +31,6 @@ class spyscraper:
         for i in range(len(self.artist_ids)):
             results = sp.artist_albums(self.artist_ids[i],album_type='album')
             albums = results['items']
-            print(albums)
             for j in range(len(albums)):
                 if albums[j]['name'] not in self.album_names:
                     self.album_ids.append(albums[j]['id'])
@@ -59,7 +58,6 @@ class spyscraper:
                                   results[i]['mode'],results[i]['key'],results[i]['acousticness'],results[i]['speechiness']]
                 self.track_analysis_input.append(single_track_analysis)
                 self.track_analysis_output.append(self.ouput_id)
-                print(single_track_analysis)
             except TypeError:
                 print('Oops!')
 
