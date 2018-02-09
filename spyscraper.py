@@ -3,7 +3,7 @@ import numpy as np
 import time
 import spotipy
 
-client_credentials_manager = SpotifyClientCredentials('62282555af7347fd92b608d7d2daf1d9','6a927564cd03483fba5eb814b42e8f8e')
+client_credentials_manager = SpotifyClientCredentials(YOUR OWN CREDENTIALS)
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 class spyscraper:
